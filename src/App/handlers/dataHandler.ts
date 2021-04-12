@@ -28,12 +28,10 @@ export class DataHandler {
       d.wrapS = ClampToEdgeWrapping;
       d.wrapT = ClampToEdgeWrapping;
     })
-    console.log(data)
     this.data = [...data];
   }
   private next = () => {
     this.index = (this.index + 1) % this.data.length;
-    console.log(this.index)
     return this.data[this.index];
   }
   public loop = (gpuHandler: GPUHandler, time = 1000) => {
