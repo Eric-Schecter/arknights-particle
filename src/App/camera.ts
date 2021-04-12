@@ -11,10 +11,4 @@ export class MyCamera {
   public get instance() {
     return this._instance;
   }
-  public update = () =>{
-    if(this._instance.position.z<300){
-      this._instance.position.z+=5;
-      this._instance.lookAt(0, 0, 0);
-    }
-  }
 }
