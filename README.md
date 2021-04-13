@@ -3,7 +3,7 @@
 </p>
 
 ## About The Project
-The visualization is enspired by the game Arknights.   
+The visualization is inspired by the game Arknights.   
 
 ## Get Started
 #### Run Online   
