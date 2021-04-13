@@ -1,6 +1,6 @@
 import {
   InstancedBufferGeometry, ShaderMaterial, Mesh, InstancedBufferAttribute,
-  UniformsUtils, UniformsLib, Color, WebGLRenderer, IUniform, BoxBufferGeometry, Vector2
+  UniformsUtils, WebGLRenderer, IUniform, BoxBufferGeometry, Vector2
 } from "three";
 import { vertexShader, fragmentShader } from './shaders';
 import { GPUHandler, DataHandler } from "./handlers";
@@ -44,9 +44,6 @@ export class Particles {
   }
   private setupMaterial = () => {
     this.uniforms = UniformsUtils.merge([
-      UniformsLib["lights"],
-      { uTime: { value: 0 } },
-      { diffuse: { value: new Color(0xffffff) } },
       { texturePosition: { value: null } },
       { textureVelocity: { value: null } },
     ]);
@@ -54,7 +51,6 @@ export class Particles {
       vertexShader,
       fragmentShader,
       uniforms: this.uniforms,
-      lights: true,
     });
   }
   public update = (mouse: Vector2) => {

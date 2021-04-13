@@ -1,6 +1,5 @@
 import { Scene, WebGLRenderer } from 'three';
 import { MyCamera } from './camera';
-import { Lights } from './lights';
 import { Renderer } from './renderer';
 import { MyScene } from './scene';
 import { resizeRendererToDisplaySize } from '../shared/resize';
@@ -11,7 +10,6 @@ import { EventsHandler } from './handlers';
 export class Viz {
   private scene: Scene;
   private camera: MyCamera;
-  private lights: Lights;
   private renderer: WebGLRenderer;
   private particles: Particles | null = null;
   private eventsHandler: EventsHandler;
@@ -20,7 +18,6 @@ export class Viz {
     this.renderer = new Renderer(canvas).instance;
     this.scene = new MyScene().instance;
     this.camera = new MyCamera();
-    this.lights = new Lights();
     this.eventsHandler = new EventsHandler(canvas);
 
     const dataHandler = new DataHandler();
@@ -35,15 +32,7 @@ export class Viz {
         this.scene.add(this.particles.instance);
       });
 
-    this.add2Scene();
     this.update();
-
-  }
-
-  private add2Scene = () => {
-    this.scene.add(
-      ...this.lights.instance
-    );
   }
 
   private update = () => {
