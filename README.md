@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/26343636/114347605-c6a4fb00-9b97-11eb-952e-f08d28d11190.gif">
-</p>
+![profile](/images/profile.gif)  
 
 ## About The Project
 The visualization is inspired by the game Arknights.   

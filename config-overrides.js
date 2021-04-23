@@ -6,9 +6,6 @@ module.exports = function override(config, env) {
   loaders.splice(index, 0, {
     test: /\.(frag|vert|fragment|vertex|shader|glsl)$/,
     loader: path.resolve(__dirname, './src/loaders/shader-loader.js'),
-    options: {
-      devtool: 'source-map',
-    }
   })
   return config;
 }
