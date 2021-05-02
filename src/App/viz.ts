@@ -43,5 +43,6 @@ export class Viz {
   }
   public unregister = () => {
     this.eventsHandler.unregister();
+    this.renderer.dispose();
   }
 }
