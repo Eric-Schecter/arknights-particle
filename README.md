@@ -14,7 +14,7 @@ git clone git@github.com:Eric-Schecter/arknights-particle.git
 ```
 2. Open Folder  
 ```
-cd DataEditor
+cd arknights-particle
 ```
 3. Install npm packages  
 ```
